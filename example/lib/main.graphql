@@ -1,0 +1,17 @@
+query FetchPerson ($id: ID!) {
+    fetch_person(id: $id) {
+        ...PersonSummary
+        parents {
+            ...PersonSummary
+        }
+        children {
+            ...PersonSummary
+        }
+    }
+}
+
+mutation UpdatePerson($id: ID!) {
+    update_person(id: $id) {
+        full_name
+    }
+}

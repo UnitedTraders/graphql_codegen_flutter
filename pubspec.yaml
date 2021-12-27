@@ -1,0 +1,31 @@
+name: graphql_codegen_flutter
+description: |
+  Simple, opinionated, codegen library for GraphQL. It allows you to
+  generate serializers and client helpers to easily call and parse your data.
+
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  gql: ^0.13.0
+  build: ^2.0.1
+  glob: ^2.0.1
+  code_builder: ^4.0.0
+  dart_style: ^2.0.1
+  built_collection: ^5.0.0
+  path: ^1.8.0
+  recase: ^4.0.0
+  graphql_codegen_config: ^0.1.0
+  graphql_code_builder_flutter:
+    git:
+      url: https://github.com/UnitedTraders/graphql_code_builder_flutter
+
+dev_dependencies:
+  test: ^1.17.4
+  build_test: ^2.1.0
+  build_runner: ^2.0.3
+  json_serializable: ^5.0.0
+  graphql: ^5.0.0-nullsafety.5
+  json_annotation: ^4.0.1

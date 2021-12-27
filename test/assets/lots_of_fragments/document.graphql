@@ -1,0 +1,42 @@
+type Query {
+    field: IField
+}
+
+interface IField {
+    name: String
+    field: IField
+}
+
+type FieldA implements IField {
+    name: String
+    value: String
+    field: IField
+}
+
+fragment FragmentA on FieldA {
+    __typename
+    value
+    ...FragmentI
+}
+
+fragment FragmentI on IField {
+    __typename
+    name
+}
+
+query FetchStuff {
+    __typename
+    field {
+        __typename
+        name
+        ...FragmentA
+        ...on FieldA {
+            __typename
+            value
+            ...on IField {
+                __typename
+                name
+            }
+        }
+    }
+}
